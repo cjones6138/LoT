@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+html {
+	background-color: black;
+	color: steelblue;
+	font-family: palatino, serif;
+}
+
+.navHeader{
+	text-align: center;
+	width: 100%;
+}
+
+.btnHeader {
+	width: 50%;
+	color: steelblue;
+	font-family: palatino, serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	background-color: whitesmoke;
+	border: none;
+	box-shadow: inset rgb(80, 80, 80) 0px 20px 15px -20px, inset rgb(80, 80, 80) 0px -20px 15px -20px;
+	padding: 9px;
+	float: left;
+}
+
+.btnHeader:hover {
+	background-color: lightgray;
+}
+
+.wrapper {
+	max-width: 95%;
+	margin: 0 auto;
+	padding: 2% 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.banner{
+	width: 100%;
+	margin-bottom: -30px;
+	box-shadow: inset 1000px 0px 2000px black;
+}
+
+.container {
+	min-width: 400px;
+	overflow: auto;
+	padding: 2% 2%;
+}
+
+.sectionHeader {
+	font-family: palatino, serif;
+	color: steelblue;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.btn {
+	text-align: center;
+	vertical-align: middle;
+	padding: .67em .67em;
+	cursor: pointer;
+}
+
+.btnPrimary {
+	color: steelblue;
+	background-color: whitesmoke;
+	border: none;
+	border-radius: .3em;
+	font-weight: bold;
+	margin: 5px;
+}
+
+.btnPrimary:hover {
+	color: whitesmoke;
+	background-color: purple;
+}
+
+.shopItems {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.shopItem {
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 10px 5% 20px 5%;
+	border: 2px solid purple;
+	border-radius: .3em;
+}
+
+.shopItemTitle {
+	grid-column: 1 / 4;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: steelblue;
+	margin-bottom: 5px;
+}
+
+.shopItemImage {
+	grid-column: 1 / 2;
+	height: 60px;
+	padding: .5em;
+}
+
+.shopItemDetails {
+	grid-column: 2 / 4;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	padding: .5em;
+}
+
+.shopItemPrice {
+	color: purple;
+	font-weight: bold;
+	text-align: left;
+}
+
+.cartHeader {
+	font-weight: bold;
+	font-size: 1.25em;
+	color: steelblue;
+}
+
+.cartColumn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.cartRow {
+	display: flex;
+	justify-content: center;
+}
+
+.cartItem {
+	width: 45%;
+}
+
+.cartPrice {
+	width: 20%;
+	font-size: 1.2em;
+	color: purple;
+}
+
+.cartRemove {
+	width: 35%;
+}
+
+.cartItemTitle {
+	color: steelblue;
+	margin-left: .5em;
+	font-size: 1.2em;
+}
+
+.cartItemImage {
+	width: 75px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.btnDanger {
+	color: whitesmoke;
+	background-color: red;
+	border: none;
+	border-radius: .3em;
+	font-weight: bold;
+}
+
+.btnDanger:hover {
+	background-color: darkred;
+}
+
+cartRow:last-child .cartColumn {
+	border: none;
+}
+
+.cartTotal {
+	text-align: end;
+	margin: 10px 10px 1em 0px;
+}
+
+.cartTotalTitle {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+	margin-right: 20px;
+}
+
+.cartTotalPrice {
+	color: white;
+	font-size: 1.1em;
+	margin-right: 20px;
+}
+
+.btnPurchase {
+	display: block;
+	margin: 0 auto;
+	font-size: 1.75em;
+}
+
+.checkoutSection {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.checkoutHeader {
+	font-weight: bold;
+	font-size: 1.25em;
+	color: steelblue;
+	margin: .6em 0em;
+}
+
+.checkoutForm {
+	display: grid;
+	grid-template-columns: 90%;
+	grid-template-rows: repeat(3, auto);
+	justify-content: center;
+	width: 100%;
+}
+
+.checkoutLabel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	display: inline-block;
+	padding: 3px;
+	margin-bottom: 5px;
+	border: 2px solid purple;
+	border-radius: .3em;}
+
+.label {
+	display: block;
+	font-size: 1em;
+	color: steelblue;
+	font-weight: bold;
+}
+
+.textbox {
+	width: 45%;
+	outline: none;
+	border: none;
+	display:block;
+	line-height: 1.2em;
+	font-size: 14pt;
+	color: whitesmoke;
+	background-color: black;
+ }
+
+ .btnCheckout {
+	display: block;
+	margin: 1em auto;
+	font-size: 1.75em;
+ }
+
+footer {
+	background-color: whitesmoke;
+	font-family: palatino, serif;
+	border: 2px solid rgb(80, 80, 80);
+	box-shadow: inset rgb(80, 80, 80) 0px 20px 15px -20px, inset rgb(80, 80, 80) 0px -20px 15px -20px;
+	padding: 5px;
+	text-align: center;
+	line-height: 30px;
+	clear: both;
+    position: relative;
+    height: 30px;
+}

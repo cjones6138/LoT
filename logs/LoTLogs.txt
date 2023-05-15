@@ -1,0 +1,164 @@
+Author: Charles Jones
+Subject: Proposal Project
+File: Logs
+
+010923
+I proposed the project idea on the discussion board:
+"Proposal: Store for an Online Game.
+
+The company would be for a sci-fi dungeon crawler themed video game. The shop
+would be a way for players to buy in-game content with real world money on the
+company's website. The players can purchase in-game money, special items, and
+various subscriptions. The customer would have to enter their name and email
+for the database side, a shopping cart would be possible for the web application,
+information about the items would be listed on the page, invoices would be sent
+for individual transactions as well as recurring invoices for subscriptions."
+
+
+011123
+Started to develop the HTML and CSS documents for the project.
+
+I created a graphic to use as the banner. The banner is positioned at the top of
+every page. 
+
+I had trouble figuring out how to center the footer at the bottom of the web page.
+I had to use the following CSS:
+	text-align: center;
+	line-height: 30px;
+	clear: both;
+    position: relative;
+    height: 30px;
+    margin-top: -30px;
+
+
+011223
+I created the HTML pages for the 'Shop', 'Subscription', and 'Suggestion Box'. 
+
+I will need to make a checkout page at some point and possibly a page to go back
+and print an invoice if the customer did not print it the first time. Once a
+customer clicks 'Checkout' on the checkout page, the invoice should be printed.
+
+The subscription page should be a simple page that refreshes after clicking a 'Next'
+button and add the next information needed to process the subscription. I last 
+increment of the subscription page should print an invoice with the subscription
+purchased.
+
+The suggestion box will have a few text boxes that will send an email to a designated
+email to setup later.
+
+
+011623
+I created a localhost web-server for my application. I was reading inforamtion on
+the Apache Tomcat web site for a few days prior to try and understand what I needed
+to do. I ended up watching a YouTube video that walked me through downloads and
+terminal commands to setup Tomcat on my MacBook. This caused my to switch from Sublime
+to Eclipse IDE; one I have also familiar with. I initially downloaded the latest v10 
+of Tomcat, but when I tried to setup the server on Eclipse, Eclipse did not have an
+option to setup a Dynamic Web Project with Apache Tomcat v10, but only v9 and before.
+
+The transfer to Eclipse lead me to copy my files into an Eclipse Workspace folder
+to continue with the project.
+
+I was able to setup the web server and servlet for the project.
+
+I had to rename the .html files to .jsp in order for them to update correctly. The
+black background didn't show up at first on my Chrome browser; it was just white. So,
+I had to disable the High Contrast setting.
+
+I additionally added some different text in the Title and Body tag of each web page to give
+a visual indication which page I am looking at on a web browser and that my hyperlinks to
+each page from the Nav bar work as intended.
+
+Start up web server: /library/tomcat/bin/startup.sh
+	NOTE: The web server can be started by choosing the localhost server in the console
+	window and click the green start button on the right side of the console window.
+View in browser: localhost:8080/LostOutThere/index/jsp
+Shutdown web server: /library/tomcat/bin/shutdown.sh
+
+
+013023
+I tried to setup myPHPAdmin. I will need to brush up on my PHP and SQL. I created the
+database and a couple tables for when I'm ready to connect the database to my jsp files.
+I've been spending a lot of time reviewing how to write JS and PHP. 
+
+The localhost is still working. I figured out that I can start and stop the server out of
+Ecplipse instead of having to go into the terminal every time.
+
+
+020423
+I developed some of the market web application. I created drop downs that have content and 
+a button to add to the cart inside the drop downs. I used code that I found on W3Schools
+website and modified it to work for my market place. 
+
+I looked through an old textbook on how to create buttons in HTML and then I had to search
+online how to create an action with the buttons. I found that there are two ways to create
+buttons in HTML/JS. I was able to add a few functions to the shop.jsp so that I could make
+sure that I understood the script. I think I'll later change the mechanics of the funcitons
+that I've already created to add things to a database and print the invoices.
+
+The longest part of todays code was figuring out how to float three elements side-by-side
+and them not look a mess. Figured it out. It was easier than I made it out to be at first.
+
+I need to go back and add some notes to my code before I sign off today.
+
+
+020923
+I found out that I connected my application directly to Apache Tomcat for no reason. I was
+supposed to download MAMP and connect to the Apache server through MAMP. That makes now, 
+because I was trying to connect the SQL database to my web application and didn't udnerstand
+how they connected. 
+
+I will have to figure out how to connect the database to my web application next. I have the
+shop pretty much complete asthetically. I changed the layout from trying to float div's to 
+styling tables. When I used div's the image, title, and button floated to different heights
+and I could not find a way to center each container so they were all in a straight line.
+
+
+040323
+I have not kept notes in a while. A lot has changed. I have created a JS sheet with functions
+that change the interface. I have created a SQL connection to PHPMyAdmin. I can now add and
+remove data from the cart_table in the lot_db. There have been a lot of differen thought
+processes throughout the project. A lot of code I found online has built a part of the web
+application that has later changed, or been modified, to suit a new need for further development.
+I have started puting PHP queues in my JS functions to operate the SQL queries at the same time
+that they appear on the user interface.
+
+I will soon start to put carts into invoices. I want to try storing data from the cart_table into
+the invoice_db. Starting the checkout interface. I will probably do away with the suggestions 
+page unless I have time to do something at the end. I would like the checkout/invoice page to
+have a different header than the rest of the application; something more simplistic that could
+be printed from screen or transfered to a pdf.
+
+04172023
+I have done a lot of database integration recently. I have been setting up the code to create a
+database on a system that a database is not yet created. My inventory items will be deleted. I
+think I have found a way to develop the invoice table. I have now created a customer table that
+will be combined with the cart table to fill in the information on the invoice table. I will use
+the information on the invoice table to form the invoice. Can I reference data in other tables from
+one specific table? Would that be a bunch of foreign keys? Could I do a customer table with reference
+to the cart table? Do I need to implement a schema to do something like that? Are schema's possible
+in PHPMyAdmin?
+
+I have managed to use my JS buttons to inact code that adds and drops items to the cart table on
+PHPMyAdmin. I still need a way to update my quantity in my database using the JS number input. I was
+able to find the node that depicts the title. I now have to find a way to select the correct row
+and increment the quantity by one with the counter.
+
+04182023
+I removed quantity from the website. I could not figure out way to adjust the quantity with the input
+counter without rewriting a good portion of the website with php to manipulate much of the frontend. 
+I like the way it turned out still. This will make the database manipulation a bit simpler as well. 
+
+I was also able to figure out how to align everything on the page center regardless of the screensize.
+I was searching for that answer for so long and it just kept escaping me. The answer was display: flex, 
+flex-wrap: wrap, justify-content: center; that took far too long to figure out.
+
+The remainder of the project should be database and displaying an invoice. I need to figure out if I
+can pull information from another table using the foreign key or something of that nature by referencing
+like items on different tables. Maybe I will need to Select and create a new table on the invoice page.
+
+04272023
+It is time to submit the web application. I can get the result requested in the initial description; add
+items to the cart, add to database, and return an invoice. I can see so many flaws in my code that need
+to be provisioned. There are not enough information checks. I think some of my JS code should have been
+strictly PHP. It is not quite where I would like it to be for a final product.
